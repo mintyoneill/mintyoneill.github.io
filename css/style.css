@@ -1,3 +1,39 @@
-p {
+/*----- TYPOGRAPHY -----*/
+
+h1, h2, h3, a, p {
+    font-family: "transat-text", sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+p, a {
     color:darkslategrey;
 }
+
+.mo-logo {
+    max-width: 80px;
+}
+
+/*----- FLEX/GRID STRUCTURES -----*/
+
+.wrapper-home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-left-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
