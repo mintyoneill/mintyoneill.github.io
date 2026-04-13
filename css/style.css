@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 /*----- TYPOGRAPHY -----*/
 
 h1, h2, h3, a, p {
@@ -26,11 +30,28 @@ p, a {
 .home-left {
     display: flex;
     flex-direction: column;
+    
+    position: fixed;
+    min-width: 20%;
+    height: 80vh;
+    align-items: flex-end;
+    padding: 6rem;
+    gap: 2rem;
+
+    background-color: #f4f8f6;
+
 }
 
 .home-left-text {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+
+    text-align: right;
+}
+
+.home-right {
+
 }
 
 .home-grid {
