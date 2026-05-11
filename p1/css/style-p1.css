@@ -2,7 +2,12 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, p, a {
+h1,
+h2,
+h3,
+h4,
+p,
+a {
   font-family: "quicksand", sans-serif;
   opacity: 0;
 }
@@ -15,14 +20,20 @@ p {
   font-weight: 400;
 }
 
+.wrapper {
+  background-color: #000;
+
+  position: relative;
+}
 
 section {
+  background-image: url(../images/space-background.jpeg);
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   width: 100vw;
-  background-image: url(../images/space-background.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   color: rgb(255, 242, 182);
   border-bottom: 1px solid white;
 }
@@ -37,6 +48,24 @@ article {
   align-items: center;
   gap: 400px;
 }
+
+article.content {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.intro {
+  min-height: 100vh;
+  width: 100vw;
+
+  color: rgb(255, 242, 182);
+  border-bottom: 1px solid white;
+}
+
+.intro .content {
+  gap: 60px;
+}
+
 
 .event-card {
   background-color: rgba(5, 11, 23, 0.75);
@@ -53,9 +82,7 @@ article {
 
 }
 
-.wrapper {
-  position: relative;
-}
+
 
 .calendar {
   position: fixed;
@@ -80,3 +107,9 @@ h1, h2, h3, h4, p, a, .event-card {
   80% {opacity: 1;}
 }
 
+.hide {
+  height: 0;
+  opacity: 0;
+  transition: 1s;
+  display: none;
+}

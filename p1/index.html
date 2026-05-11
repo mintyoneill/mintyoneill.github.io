@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style-p1.css" />
         <link rel="stylesheet" href="https://use.typekit.net/ryv1fsj.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
         <title>A Flip Through The Cosmic Calendar</title>
     </head>
@@ -114,9 +114,17 @@
                 </article>
             </section>
         </div>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="js/minified/gsap.min.js"></script>
+    <script src="js/minified/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 
-        <script src="js/minified/gsap.min.js"></script>
-        <script src="js/minified/ScrollTrigger.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <script>
+        $('.intro button').click(function () {
+            $('.intro').addClass('hide')
+        })
+    </script>
+</body>
+
 </html>
