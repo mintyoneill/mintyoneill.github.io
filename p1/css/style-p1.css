@@ -2,13 +2,11 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-a {
+h1, h2, h3, h4, p, a {
   font-family: "quicksand", sans-serif;
+}
+
+h2, h3, h4 {
   opacity: 0;
 }
 
@@ -82,8 +80,6 @@ article.content {
 
 }
 
-
-
 .calendar {
   position: fixed;
   top: 40px;
@@ -96,14 +92,14 @@ article.content {
   min-width: 120px;
 }
 
-h1, h2, h3, h4, p, a, .event-card {
+h2, h3, h4, .event-card {
   animation: fade-in linear;
-  animation-timeline: view(-5vh 25vh);
+  animation-timeline: view(-5vh 30vh);
 }
 
 @keyframes fade-in {
   0% {opacity: 0;}
-  30% {opacity: 1;}
+  40% {opacity: 1;}
   80% {opacity: 1;}
 }
 
