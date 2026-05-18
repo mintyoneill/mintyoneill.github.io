@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, span {
   font-family: "quicksand", sans-serif;
 }
 
@@ -102,6 +102,22 @@ h2, h3, h4, .event-card {
   40% {opacity: 1;}
   80% {opacity: 1;}
 }
+
+span {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: rgb(255, 242, 182);
+  text-shadow: 0 0 10px rgb(255, 242, 182);
+  text-shadow: 0 0 8px rgb(255, 242, 182);
+  text-shadow: 0 0 12px rgb(255, 242, 182);
+}
+
+span:hover {
+ color: white;
+ text-shadow: 0 0 0px;
+}
+
+/*-------------*/
 
 .hide {
   height: 0;
