@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(45, 62, 45);
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-CcmPpQE64vpwhr5jh53ZLjY1d5b3TUkTA&s');
+}
+
+.specialties {
+  background-color: rgb(169, 231, 200);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+}
+
+.specialties .wayfinding {
+  border: 1px solid purple;
+}
+
+.specialties .web {
+  grid-column: 1/3;
+  border: 1px solid red;
+}
+
+.specialties .motion {
+  grid-column: 1/3;
+  border: 1px solid red;
+}
+
+.grid {}
+
+.portfolio {
+  background-color: rgb(70, 100, 70);
+  width: 100vw;
+}
+
+.sidenav ul {
+  list-style: none;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.right {
+  background-color: rgb(169, 231, 200);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 60px;
+}
