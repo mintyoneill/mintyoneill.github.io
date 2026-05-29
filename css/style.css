@@ -50,10 +50,6 @@ p, a {
     text-align: right;
 }
 
-.home-right {
-
-}
-
 .home-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

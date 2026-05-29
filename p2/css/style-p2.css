@@ -4,26 +4,72 @@
 
 body {
   margin: 0;
-  background-color: rgb(45, 62, 45);
+  background-color: #113233;
+
+  background-image: "../images/mo-leaf.svg";
+  background-repeat: repeat;
 }
+
+/*------- TYPOGRAPHY -------*/
+
+h1, h2, h3, a, p {
+  font-family: "Transat Text", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4rem;
+  color: #C6EBE0;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: white;
+}
+
+h3 {
+  color: #5fb3a8;
+}
+
+/*------- NAV / HERO -------*/
 
 .hero {
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  max-width: 100vw;  
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-CcmPpQE64vpwhr5jh53ZLjY1d5b3TUkTA&s');
+
 }
 
+.nav-icon-home img {
+  position: fixed;
+  z-index: 0;
+  max-width: 140px;
+  padding: 40px;
+
+}
+
+
+/*------- SPECIALTIES -------*/
+
 .specialties {
-  background-color: rgb(169, 231, 200);
+  background-color: #C6EBE0;
+  z-index: 10;
+  position: relative;
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: grid;
   grid-template-columns: 60% 40%;
 
 }
 
 .specialties .wayfinding {
+  grid-column: 1/3;
   border: 1px solid purple;
 }
 
@@ -37,24 +83,41 @@ body {
   border: 1px solid red;
 }
 
-.grid {}
+/*------- PORTFOLIO -------*/
 
 .portfolio {
-  background-color: rgb(70, 100, 70);
-  width: 100vw;
-}
+  background-color: #113233;
+  max-width: 100vw;
 
-.sidenav ul {
-  list-style: none;
-}
-
-.portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+.portfolio a, .portfolio a:visited {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #C6EBE0;
+  
+  transition: 200ms all;
+}
+
+.portfolio a:hover {
+  color: white;
+}
+
+.left ul {
+  list-style: none;
+  position: sticky;
+  top: 200px;
+}
+
+.left li {
+  padding: 0.25rem 0;
+}
+
 .right {
-  background-color: rgb(169, 231, 200);
+  background-color: #C6EBE0;
 }
 
 .portfolio-grid {
