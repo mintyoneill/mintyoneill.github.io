@@ -53,23 +53,25 @@ h3 {
 .hero-lockup {
   text-align: center;
   /* filter: drop-shadow(0 0 2rem #113233); */
-  /* background-color: #11323399; */
-  border-radius: 90px;
+  background-color: #11323399;
+  border-radius: 70px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
   display: flex;
   flex-direction: column;
-  margin: 0 28vw;
-  padding: 2rem;
+  margin: 0 25vw;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 #hero-gradient {
   background: radial-gradient(
   circle,
   #C6EBE066,
-  #C6EBE066 40%,
-  #113233 65%);  
+  #C6EBE066 30%,
+  #11323366 65%,
+  #113233 80%);  
   width: 600px;
   height: 600px;
   position: absolute;
