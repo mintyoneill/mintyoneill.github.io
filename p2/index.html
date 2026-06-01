@@ -43,17 +43,42 @@
     </nav>
     <section class="right">
       <article class="portfolio-grid">
-        <div class="card web"><img src="https://picsum.photos/seed/picsum/200/300"></div>
-        <div class="card print"><img src="https://picsum.photos/seed/picsum1/200/300"></div>
-        <div class="card wayfinding"><img src="https://picsum.photos/seed/picsum2/200/300"></div>
-        <div class="card print"><img src="https://picsum.photos/seed/picsum3/200/300"></div>
-        <div class="card wayfinding"><img src="https://picsum.photos/seed/picsum4/200/300"></div>
-        <div class="card motion"><img src="https://picsum.photos/seed/picsum5/200/300"></div>
-        <div class="card web"><img src="https://picsum.photos/seed/picsum6/200/300"></div>
-        <div class="card web motion"><img src="https://picsum.photos/seed/picsum7/200/300"></div>
-        <div class="card motion"><img src="https://picsum.photos/seed/picsum8/200/300"></div>
-        <div class="card print wayfinding"><img src="https://picsum.photos/seed/picsum9/200/300"></div>
-        <div class="card print"><img src="https://picsum.photos/seed/picsum0/200/300"></div>
+        <div class="card web">
+          <div class="card-hover-text">
+            <h3>Sample Project Name Here</h3>
+          </div>
+          <img src="https://picsum.photos/seed/picsum/200/300">
+        </div>
+        <div class="card print">
+          <img src="https://picsum.photos/seed/picsum1/200/300">Text here </img>
+        </div>
+        <div class="card wayfinding">
+          <img src="https://picsum.photos/seed/picsum2/200/300">
+        </div>
+        <div class="card print">
+          <img src="https://picsum.photos/seed/picsum3/200/300">
+        </div>
+        <div class="card wayfinding">
+          <img src="https://picsum.photos/seed/picsum4/200/300">
+        </div>
+        <div class="card motion">
+          <img src="https://picsum.photos/seed/picsum5/200/300">
+        </div>
+        <div class="card web">
+          <img src="https://picsum.photos/seed/picsum6/200/300">
+        </div>
+        <div class="card web motion">
+          <img src="https://picsum.photos/seed/picsum7/200/300">
+        </div>
+        <div class="card motion">
+          <img src="https://picsum.photos/seed/picsum8/200/300">
+        </div>
+        <div class="card print wayfinding">
+          <img src="https://picsum.photos/seed/picsum9/200/300">
+        </div>
+        <div class="card print">
+          <img src="https://picsum.photos/seed/picsum0/200/300">
+        </div>
       </article>
 
 
@@ -77,9 +102,21 @@
   <script src="https://code.jquery.com/jquery-4.0.0.slim.js" integrity="sha256-M+GjhMBfXikM1izMplICCTscIj5hzPCp6uDzaypxtgg="crossorigin="anonymous"></script>
 
   <script>
+     $("#wayfinding").click(function () {
+      $(".card").hide();
+      $(".wayfinding").show();
+    });
+    $("#print").click(function () {
+      $(".card").hide();
+      $(".print").show();
+    });
     $("#web").click(function () {
       $(".card").hide();
       $(".web").show();
+    });
+    $("#motion").click(function () {
+      $(".card").hide();
+      $(".motion").show();
     });
     $("#featured").click(function () {
       $(".card").show();

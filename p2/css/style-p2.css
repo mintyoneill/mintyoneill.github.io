@@ -30,8 +30,6 @@ h1 span {
 }
 
 h3 {
-  /* color: #5fb3a8; */
-  color: #C6EBE0;
   font-weight: 400;
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -63,6 +61,10 @@ h3 {
   margin: 0 25vw;
   padding: 1rem;
   padding-bottom: 1.5rem;
+}
+
+.hero-lockup-text {
+  color: #C6EBE0;
 }
 
 #hero-gradient {
@@ -177,7 +179,29 @@ h3 {
   padding: 60px;
 }
 
-.portfolio-grid img {
+.card {
   border-radius: 10px;
   box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-grid img {
+  object-fit: cover;
+}
+
+.card-hover-text {
+  color: white;
+  font-weight: 600;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
