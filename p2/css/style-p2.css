@@ -9,8 +9,10 @@ html {
 body {
   margin: 0;
   background-color: #113233;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
+
+
 
 /*------- TYPOGRAPHY -------*/
 
@@ -143,10 +145,10 @@ h3 {
   min-height: 100vh;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
 }
 
-.portfolio a, .portfolio a:visited {
+.selector, .selector:visited {
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: none;
@@ -159,6 +161,10 @@ h3 {
   color: white;
 }
 
+.selected {
+  text-decoration: underline;
+}
+
 .left ul {
   list-style: none;
   position: sticky;
@@ -169,12 +175,16 @@ h3 {
   padding: 0.25rem 0;
 }
 
+
+
 .right {
   background-color: #C6EBE0;
-  transform: skewX(-10deg);
+  /* background: linear-gradient(0deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
 
   position: sticky;
-  top: 1rem;
+  top: 0;
+  align-self: start;
+  transform: skewX(-10deg);
 }
 
 .portfolio-grid {
@@ -183,6 +193,7 @@ h3 {
   grid-gap: 1rem;
   padding: 60px;
   
+  align-self: start;
 
 }
 
@@ -197,7 +208,7 @@ h3 {
 .portfolio-grid img {
   object-fit: cover;
   height: 100%;
-  width: 100%;
+  width: 125%;
 }
 
 .card-hover-text {

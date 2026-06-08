@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="view-transition" content="same-origin">
   <title>Mint O'Neill - Graphic Design Portfolio</title>
   <link rel="stylesheet" href="css/style-p2.css">
   <link rel="stylesheet" href="https://use.typekit.net/ryv1fsj.css">
@@ -33,51 +34,103 @@
   <main class="portfolio" id="portfolio">
     <nav class="left">
       <ul>
-        <li><a href="#portfolio" id="featured">FEATURED</a></li>
-        <li><a href="#portfolio" id="wayfinding">WAYFINDING</a></li>
-        <li><a href="#portfolio" id="print">PRINT</a></li>
-        <li><a href="#portfolio" id="web">WEB/UI</a></li>
-        <li><a href="#portfolio" id="motion">MOTION</a></li>
-        <li><a class="button" href="#portfolio">MORE FILTERS</a></li>
+        <li><a href="#portfolio" class="selector selected" id="featured">FEATURED</a></li>
+        <li><a href="#portfolio" class="selector" id="wayfinding">WAYFINDING</a></li>
+        <li><a href="#portfolio" class="selector" id="print">PRINT</a></li>
+        <li><a href="#portfolio" class="selector" id="web">WEB/UI</a></li>
+        <li><a href="#portfolio" class="selector" id="motion">MOTION</a></li>
+        <li><a class="button selector" href="#portfolio">MORE FILTERS</a></li>
       </ul>
     </nav>
     <section class="right">
       <article class="portfolio-grid">
         <div class="card web">
-          <div class="card-hover-text">
-            <h3>Sample Project Name Here</h3>
-          </div>
-          <img src="https://picsum.photos/seed/picsum/200/300">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Web Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum/200/300">
+          </a>
         </div>
         <div class="card print">
-          <img src="https://picsum.photos/seed/picsum1/200/300">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Print Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum1/200/300">
+          </a>        
         </div>
         <div class="card wayfinding">
-          <img src="https://picsum.photos/seed/picsum2/200/300">
-        </div>
-        <div class="card print">
-          <img src="https://picsum.photos/seed/picsum3/200/300">
-        </div>
-        <div class="card wayfinding">
-          <img src="https://picsum.photos/seed/picsum4/200/300">
-        </div>
-        <div class="card motion">
-          <img src="https://picsum.photos/seed/picsum5/200/300">
-        </div>
-        <div class="card web">
-          <img src="https://picsum.photos/seed/picsum6/200/300">
-        </div>
-        <div class="card web motion">
-          <img src="https://picsum.photos/seed/picsum7/200/300">
-        </div>
-        <div class="card motion">
-          <img src="https://picsum.photos/seed/picsum8/200/300">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Wayfinding Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum2/200/300">
+          </a>        
         </div>
         <div class="card print wayfinding">
-          <img src="https://picsum.photos/seed/picsum9/200/300">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Print Wayfinding Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum3/200/300">
+          </a>        
+        </div>
+        <div class="card wayfinding">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Wayfinding Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum4/200/300">
+          </a>        
+        </div>
+        <div class="card motion">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Motion Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum5/200/300">
+          </a>        
+        </div>
+        <div class="card web">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Web Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum6/200/300">
+          </a>        
+        </div>
+        <div class="card web motion">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Web Motion Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum7/200/300">
+          </a>        
+        </div>
+        <div class="card motion">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Motion Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum8/200/300">
+          </a>        
+        </div>
+        <div class="card print wayfinding">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Print Wayfinding Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum9/200/300">
+          </a>        
         </div>
         <div class="card print">
-          <img src="https://picsum.photos/seed/picsum0/200/300">
+          <a href="example/index.html">
+            <div class="card-hover-text">
+              <h3>Print Project Name Here</h3>
+            </div>
+            <img src="https://picsum.photos/seed/picsum0/200/300">
+          </a>        
         </div>
       </article>
 
@@ -105,21 +158,31 @@
      $("#wayfinding").click(function () {
       $(".card").hide();
       $(".wayfinding").show();
+      $(".selector").removeClass("selected");
+      $("#wayfinding").addClass("selected");
     });
     $("#print").click(function () {
       $(".card").hide();
       $(".print").show();
+      $(".selector").removeClass("selected");
+      $("#print").addClass("selected");
     });
     $("#web").click(function () {
       $(".card").hide();
       $(".web").show();
+      $(".selector").removeClass("selected");
+      $("#web").addClass("selected");
     });
     $("#motion").click(function () {
       $(".card").hide();
       $(".motion").show();
+      $(".selector").removeClass("selected");
+      $("#motion").addClass("selected");
     });
     $("#featured").click(function () {
       $(".card").show();
+      $(".selector").removeClass("selected");
+      $("#featured").addClass("selected");
     });
   </script>
   <script src="js/script.js"></script>
