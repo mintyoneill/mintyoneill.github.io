@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   background-color: #113233;
+  overflow-x: hidden;
 }
 
 /*------- TYPOGRAPHY -------*/
@@ -46,6 +47,7 @@ h3 {
   justify-content: center;
   align-items: center;
 
+  overflow: hidden;
 }
 
 .hero-lockup {
@@ -76,7 +78,7 @@ h3 {
   #113233 80%);  
   width: 600px;
   height: 600px;
-  position: absolute;
+  position: fixed;
   z-index: -2;
   top: -300px;
   left: -300px;
@@ -170,6 +172,9 @@ h3 {
 .right {
   background-color: #C6EBE0;
   transform: skewX(-10deg);
+
+  position: sticky;
+  top: 1rem;
 }
 
 .portfolio-grid {
@@ -177,28 +182,51 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   padding: 60px;
+  
+
 }
 
 .card {
   border-radius: 10px;
   box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  display: flex;
+  position: relative;
 }
 
 .portfolio-grid img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 
 .card-hover-text {
-  color: white;
-  
-
+  color: transparent;
   position: absolute;
-  justify-content: center;
+  inset: 0;
+  z-index: 1;
+  
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+
+  transition: 300ms all;
 }
 
 .card-hover-text h3 {
   font-weight: 600;
+}
+
+.card img {
+  transition: 300ms all;
+}
+
+.card:hover img {
+  filter: brightness(50%) grayscale();
+}
+
+.card:hover .card-hover-text {
+  color: white;
 }
