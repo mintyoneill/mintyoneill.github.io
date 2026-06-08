@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body-home {
   margin: 0;
   background-color: #113233;
   overflow-x: clip;
@@ -137,7 +137,7 @@ h3 {
   border: 1px solid red;
 }
 
-/*------- PORTFOLIO -------*/
+/*------- PORTFOLIO GENERAL / LEFT -------*/
 
 .portfolio {
   background-color: #113233;
@@ -175,7 +175,7 @@ h3 {
   padding: 0.25rem 0;
 }
 
-
+/*------- PORTFOLIO RIGHT -------*/
 
 .right {
   background-color: #C6EBE0;
@@ -240,4 +240,19 @@ h3 {
 
 .card:hover .card-hover-text {
   color: white;
+}
+
+/*------- DETAIL PAGE -------*/
+
+.nav-icon-detail img {
+  max-width: 140px;
+  padding: 40px;
+}
+
+.body-detail {
+  background-color: rgb(228, 241, 238);
+}
+
+.header-detail {
+  background-color: #C6EBE0;
 }
