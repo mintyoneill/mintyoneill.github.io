@@ -1,0 +1,50 @@
+.container {  
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+.panel {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.panel {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  padding: 30vh 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  scroll-snap-align: start;
+}
+
+.one {
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.two {
+  background: linear-gradient(140deg,rgba(34, 47, 195, 1) 0%, rgba(230, 9, 237, 1) 99%);
+}
+
+.three {
+  background: linear-gradient(352deg,rgba(34, 47, 195, 1) 0%, rgba(9, 237, 66, 1) 99%);
+}
+
+.four {
+  background: linear-gradient(289deg,rgba(58, 180, 117, 1) 0%, rgb(2, 75, 7) 51%);
+}
+
+.five {
+  background: linear-gradient(237deg,rgba(34, 47, 195, 1) 0%, rgba(49, 3, 51, 1) 99%);
+}
