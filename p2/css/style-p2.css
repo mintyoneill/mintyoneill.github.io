@@ -125,26 +125,34 @@ h3 {
   background-color: #C6EBE0;
   z-index: 10;
   position: relative;
-  height: 100vh;
   max-width: 100vw;
-  display: grid;
-  grid-template-columns: 60% 40%;
+  padding:40px;
+  padding-top: 0;
+  align-items: center;
 
+  display: flex;
+  flex-direction: column;
 }
 
-.specialties .wayfinding {
-  grid-column: 1/3;
-  border: 1px solid purple;
+.special-card {
+  height: 25vh;
+  width: 100%;
 }
 
-.specialties .web {
-  grid-column: 1/3;
-  border: 1px solid red;
+.special-card h3 {
+  position: absolute;
+  font-size: 24vh;
+  font-weight: 700;
+  font-style: italic;
+  color:#113233;
+  opacity: 0%;
+  text-align: center;
+
+  transition: 300ms all;
 }
 
-.specialties .motion {
-  grid-column: 1/3;
-  border: 1px solid red;
+.special-card h3:hover {
+  opacity: 20%;
 }
 
 /*------- PORTFOLIO GENERAL / LEFT -------*/
@@ -194,6 +202,7 @@ h3 {
   align-self: start;
   transform: skewX(-10deg);
   min-height: 100vh;
+  z-index: -4;
 }
 
 .portfolio-grid {
@@ -252,6 +261,13 @@ h3 {
   color: white;
 }
 
+/*------- FOOTER -------*/
+
+footer {
+  background-color: rgb(228, 241, 238);
+  height: 30vh;
+}
+
 /*------- DETAIL PAGE -------*/
 
 .body-detail {
@@ -293,11 +309,11 @@ h3 {
 .detail-lockup-bottom {
   display: flex;
   flex-direction: row;
+  gap: 25px;
 }
 
 .lockup-category {
   padding: 10px 20px;
-  margin: 0 20px;
   border: 3px solid #113233;
   border-radius: 30px;
   color: #113233;
@@ -315,6 +331,24 @@ h3 {
   border: 3px solid #113233;
   border-radius: 30px;
   color: #C6EBE0;
+}
+
+.spacer {
+  height: 10px;
+  background-color: #113233;
+}
+
+/*------- DETAIL PAGE MAIN -------*/
+
+.main-detail {
+  background-color: rgb(228, 241, 238);
+  /* box-shadow: 0px 2px 5px #11323344; */
+  margin: 0 20%;
+
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 /*------- MARQUEE -------*/
