@@ -11,9 +11,11 @@
 </head>
 
 <body class="body-home">
-  <a class="nav-icon-home">
-    <img src="images/mo-nogram-mint.svg">
-  </a>
+  <div class="nav-icon-home">
+    <a>
+      <img src="images/mo-nogram-mint.svg">
+    </a>
+  </div>
   <header class="hero pin-section">
     <div class="hero-lockup">
       <div class="hero-lockup-bg"></div>
@@ -34,15 +36,15 @@
   <main class="portfolio" id="portfolio">
     <nav class="left">
       <ul>
-        <li><a href="#portfolio" class="selector selected" id="featured">FEATURED</a></li>
-        <li><a href="#portfolio" class="selector" id="wayfinding">WAYFINDING</a></li>
-        <li><a href="#portfolio" class="selector" id="print">PRINT</a></li>
-        <li><a href="#portfolio" class="selector" id="web">WEB/UI</a></li>
-        <li><a href="#portfolio" class="selector" id="motion">MOTION</a></li>
+        <li><a class="selector selected" id="featured">FEATURED</a></li>
+        <li><a class="selector" id="wayfinding">WAYFINDING</a></li>
+        <li><a class="selector" id="print">PRINT</a></li>
+        <li><a class="selector" id="web">WEB/UI</a></li>
+        <li><a class="selector" id="motion">MOTION</a></li>
         <li><a class="button selector" href="#portfolio">MORE FILTERS</a></li>
       </ul>
     </nav>
-    <section class="right">
+    <section class="right" id="top">
       <article class="portfolio-grid">
         <div class="card web">
           <a href="example/index.html">
@@ -142,6 +144,27 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const container = document.querySelector(".right");
+
+    // Animate both X and Y simultaneously to create the diagonal motion
+    gsap.to(container, {
+      xPercent: 34.2, // Move right
+      yPercent: -100, // Move up
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".portfolio",
+        pin: true,
+        scrub: 1, // Smoothly scrub through the animation
+        start: "top top",
+        end: () => "+=" + container.offsetHeight, // Adjust length to fit your content
+        //invalidateOnRefresh: true,
+        markers: true
+      }
+    });
+  </script>
+  <!-- <script>
     gsap.utils.toArray('hero').forEach((panel,i) => {
       ScrollTrigger.create({
         trigger: panel,
@@ -151,7 +174,7 @@
       });
     });
      
-    </script>
+    </script> -->
   <script src="https://code.jquery.com/jquery-4.0.0.slim.js" integrity="sha256-M+GjhMBfXikM1izMplICCTscIj5hzPCp6uDzaypxtgg="crossorigin="anonymous"></script>
 
   <script>

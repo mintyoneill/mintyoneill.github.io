@@ -100,14 +100,16 @@ h3 {
   z-index: -1;
 }
 
-.nav-icon-home img {
+.nav-icon-home {
   position: fixed;
-  z-index: 0;
-  max-width: 140px;
-  padding: 40px;
-
+  z-index: 1;
+  top: 40px;
+  left: 40px;
 }
 
+.nav-icon-home img {
+  width: 60px;
+}
 
 /*------- SPECIALTIES -------*/
 
@@ -167,7 +169,7 @@ h3 {
 
 .left ul {
   list-style: none;
-  position: sticky;
+  position: absolute;
   top: 200px;
 }
 
@@ -181,17 +183,17 @@ h3 {
   background-color: #C6EBE0;
   /* background: linear-gradient(0deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
 
-  position: sticky;
-  top: 0;
   align-self: start;
   transform: skewX(-10deg);
+  min-height: 100vh;
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  padding: 60px;
+  padding: 80px;
+  padding-right: 120px;
   
   align-self: start;
 
@@ -208,7 +210,7 @@ h3 {
 .portfolio-grid img {
   object-fit: cover;
   height: 100%;
-  width: 125%;
+  width: 130%;
 }
 
 .card-hover-text {
@@ -244,15 +246,23 @@ h3 {
 
 /*------- DETAIL PAGE -------*/
 
-.nav-icon-detail img {
-  max-width: 140px;
-  padding: 40px;
-}
-
 .body-detail {
+  margin: 0;
   background-color: rgb(228, 241, 238);
+  height: 135vh;
 }
 
-.header-detail {
+.nav-icon-detail {
+  z-index: 1;
+  padding: 40px;
+  position: relative;
+}
+
+.nav-icon-detail img {
+  width: 60px;
+}
+
+.hero-detail {
   background-color: #C6EBE0;
+
 }
